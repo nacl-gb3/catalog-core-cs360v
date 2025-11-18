@@ -42,3 +42,5 @@ out/
 # Test output files
 log.build.*
 log.run.*
+
+.direnv

@@ -1,6 +1,6 @@
 #!/bin/sh
 
-test -d repos/unikraft || git clone https://github.com/unikraft/unikraft repos/unikraft
+test -d repos/unikraft || git clone https://github.com/nacl-gb3/unikraft-cs360v repos/unikraft
 test -d repos/libs/musl || git clone https://github.com/unikraft/lib-musl repos/libs/musl
 test -d repos/libs/lwip || git clone https://github.com/unikraft/lib-lwip repos/libs/lwip
 test -d repos/libs/libcxx || git clone https://github.com/unikraft/lib-libcxx repos/libs/libcxx
