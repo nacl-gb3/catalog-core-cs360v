@@ -29,6 +29,7 @@
             pkgs.bison
             pkgs.libuuid
             pkgs.libarchive
+            (pkgs.python3.withPackages (python-pkgs: [ ]))
           ];
           buildInputs = [ ];
         };
