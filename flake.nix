@@ -1,0 +1,38 @@
+{
+  description = "A basic flake with a shell";
+
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
+
+  outputs =
+    { nixpkgs, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      {
+        devShells.default = pkgs.mkShell {
+          nativeBuildInputs = [
+            pkgs.gcc
+            # pkgs.clang
+            pkgs.gdb
+            pkgs.valgrind
+            pkgs.gnumake
+            # pkgs.cmake
+            # pkgs.bear
+            pkgs.pkg-config
+            pkgs.ncurses
+            pkgs.flex
+            pkgs.bison
+            pkgs.libuuid
+            pkgs.libarchive
+            (pkgs.python3.withPackages (python-pkgs: [ ]))
+          ];
+          buildInputs = [ ];
+        };
+      }
+    );
+}
