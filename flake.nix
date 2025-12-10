@@ -12,6 +12,12 @@
       system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
+        pkgsArm = import nixpkgs {
+          localSystem = "${system}";
+          crossSystem = {
+            config = "aarch64-linux-gnu";
+          };
+        };
       in
       {
         devShells.default = pkgs.mkShell {
@@ -19,7 +25,7 @@
             pkgs.gcc
             # pkgs.clang
             pkgs.gdb
-            pkgs.valgrind
+            # pkgs.valgrind
             pkgs.gnumake
             # pkgs.cmake
             # pkgs.bear
@@ -31,7 +37,27 @@
             pkgs.libarchive
             (pkgs.python3.withPackages (python-pkgs: [ ]))
           ];
-          buildInputs = [ ];
+          buildInputs = [
+            pkgs.ncurses
+          ];
+        };
+        devShells.arm = pkgs.mkShell {
+          nativeBuildInputs = [
+            pkgs.gcc
+            pkgs.gnumake
+
+            pkgsArm.gcc
+            pkgsArm.gdb
+            pkgsArm.gnumake
+            pkgsArm.flex
+            pkgsArm.bison
+            pkgsArm.libuuid
+            pkgsArm.libarchive
+            (pkgsArm.python3.withPackages (python-pkgs: [ ]))
+          ];
+          buildInputs = [
+            pkgsArm.ncurses
+          ];
         };
       }
     );
