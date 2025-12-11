@@ -43,5 +43,6 @@ out/
 log.build.*
 log.run.*
 
-# Pls don't push direnv
+# Pls don't push direnv stuff
 .direnv
+.envrc
