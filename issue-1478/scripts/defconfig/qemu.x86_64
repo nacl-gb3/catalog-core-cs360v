@@ -6,8 +6,6 @@ CONFIG_UK_FULLVERSION="0.20.0~d13f61a2"
 CONFIG_UK_CODENAME="Kiviuq"
 CONFIG_UK_ARCH="x86_64"
 CONFIG_HOST_ARCH="x86_64"
-CONFIG_UK_BASE="/home/tokyovibes/Projects/FOSS/catalog-core-cs360v/repos/unikraft"
-CONFIG_UK_APP="/home/tokyovibes/Projects/FOSS/catalog-core-cs360v/issue-1478"
 CONFIG_UK_DEFNAME="issue-1478"
 
 #
