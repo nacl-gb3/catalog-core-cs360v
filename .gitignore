@@ -1,4 +1,4 @@
-# Repository directory
+
 /repos/
 
 # Configuration files
@@ -46,3 +46,17 @@ log.run.*
 # Pls don't push direnv stuff
 .direnv
 .envrc
+
+before.log
+after.log
+c-fs/scripts/test/
+c-hello/scripts/test/
+c-http/scripts/test/
+cpp-hello/scripts/test/
+cpp-http/scripts/test/
+elfloader-basic/output
+elfloader-basic/scripts/test/
+elfloader-net/scripts/test/
+nginx/scripts/test/
+python3-hello/scripts/test/
+redis/scripts/test/
