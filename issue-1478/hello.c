@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-__thread char bomb[17];
+__thread char bomb[16];
 
 void *foo(void *args) {
   sleep(3);
