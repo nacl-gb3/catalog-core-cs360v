@@ -11,16 +11,17 @@ For a quick setup, run the commands below.
 Note that you still need to install the [requirements](../README.md#requirements).
 Before everything, make sure you run the [top-level `setup.sh` script](../setup.sh).
 
-1. `cd` into this directory (ie `issue1478` from the root directory of `catalog-core-cs360v`; if you are reading this, then you may have already done this)
+1. `cd` into this directory (ie `issue-1478` from the root directory of `catalog-core-cs360v`; if you are reading this, then you may have already done this)
 2. Run `setup.sh` for this directory 
 3. Run `./scripts/build/qemu.x86_64` to build the unikernel (this config
 * This build is based on `scripts/defconfig/qemu.x86_64`. I chose this platform to be
 the example since it is easiest to test for me; it is likely trivial to convert this configuration 
-across architectures and runtimes (just add the neccessary additional configuration to the 
+across runtimes (just add the neccessary additional configuration to the 
 corresponding defconfig file for your desired platform, also located in `./scripts/defconfig`).
 If you want an example of a broken unikernel/config, then run `./scripts/build/qemu-broken.x86_64`;
 the aforementioned and following information should also generally apply to the broken config
-as well. 
+as well. There is also a configuration for qemu on ARM64 provided, but the output (as of Dec 15)
+shows no difference. If using the ARM64 scripts, then replace prior mentions of `x86_64` with `arm64`.
 4. Run `./scripts/run/qemu.x86_64` to run the unikernel.
 
 ## Run
