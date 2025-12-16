@@ -1,8 +1,8 @@
-# Scripts for C Hello on Unikraft
+# Scripts for Issue 1478 on Unikraft
 
 These are companions instruction to the main instructions in the [`README`](README.md).
 
-Use scripts as quick actions for building and running C Hello on Unikraft.
+Use scripts as quick actions for building and running Issue 1478 on Unikraft.
 
 **Note**: Run scripts from the application directory.
 
