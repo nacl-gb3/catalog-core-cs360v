@@ -11,3 +11,4 @@ qemu-system-x86_64 \
     -m 8 \
     -cpu max \
     -kernel workdir/build/issue-1478_qemu-x86_64
+
